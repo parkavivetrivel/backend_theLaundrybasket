@@ -17,5 +17,5 @@ app.use("/orderList", require("./routes/orderListRoutes"));
 
 
 app.listen(port, () => {
- console.log(`Server running on port ${port}`);
+ console.log(`Server running on ports ${port}`);
 });
