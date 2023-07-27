@@ -17,7 +17,7 @@ const postorderList = asyncHandler(async (req, res) => {
             NoOfSaree:req.body.NoOfSaree,
             NoOfShaul:req.body.NoOfShaul,
             totalitems:req.body.totalitems,
-            totalamount:req.body.totalamount
+            totalamount:req.body.totalamount 
     
 
   });
