@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://parkavivetrivel:bhargavi@cluster0.d7l6lca.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb://localhost:27017/";
 const client = new MongoClient(uri);
 
 const postSignup = asyncHandler(async (req, res) => {
