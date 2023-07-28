@@ -31,7 +31,6 @@ const postSignup = asyncHandler(async (req, res) => {
     await client.close();
   }
 });
-
 module.exports = {
   postSignup
 }
