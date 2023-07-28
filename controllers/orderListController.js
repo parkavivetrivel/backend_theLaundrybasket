@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const { MongoClient,ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://parkavivetrivel:bhargavi@cluster0.d7l6lca.mongodb.net/?authMechanism=DEFAULT";
+const uri = "mongodb+srv://thelaundrybasket02:parkavi2023@cluster0.d7e7ueo.mongodb.net/?retryWrites=true&w=majority";
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
