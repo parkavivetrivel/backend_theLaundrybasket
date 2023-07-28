@@ -8,7 +8,7 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 });
-
+ 
 const postSignup = asyncHandler(async (req, res) => {
   try {
     console.log("Body", req.body);
