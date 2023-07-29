@@ -7,9 +7,21 @@ const client = new MongoClient(uri, {
     version: ServerApiVersion.v1,
     strict: true,
     deprecationErrors: true,
-  }
+  }  
 });
-
+const getOrderList = asyncHandler( async (req, res) => {
+  try{
+  await client.connect();
+  const db = client.db('TheLaundryBasket');
+  const collection = db.collection('orderList')
+  const orders = await collection.find().toArray();
+  console.log(orders);
+  res.send(orders);
+  }
+  finally{
+    await client.close();
+  }
+  });
 const postorderList = asyncHandler(async (req, res) => {
   try {
   console.log("Body", req.body);
@@ -40,5 +52,5 @@ finally {
 
 });
 module.exports = {
-    postorderList
+    postorderList,getOrderList
 }
